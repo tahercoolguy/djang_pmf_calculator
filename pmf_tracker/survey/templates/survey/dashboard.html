@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard container-fluid px-4 py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2 fw-bold">Product-Market Fit Dashboard</h1>
+        {% if request.user.is_staff %}
+        <button onclick="calculatePMF()" class="btn btn-primary shadow-sm">
+            <i class="fas fa-calculator me-2"></i>Calculate PMF Score
+        </button>
+        {% endif %}
+    </div>
+
+    {% if not has_data %}
+    <div class="alert alert-info shadow-sm">
+        <h4 class="alert-heading"><i class="fas fa-info-circle me-2"></i>No Data Available</h4>
+        <p class="mb-0">There are no PMF scores calculated yet. Please collect some survey responses and calculate the PMF score.</p>
+    </div>
+    {% else %}
+    <!-- Key Metrics Section -->
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-3">Current PMF Score</h3>
+                    <h2 class="display-3 mb-3 fw-bold">{{ current_score|floatformat:1 }}%</h2>
+                    <div class="progress mb-2" style="height: 10px;">
+                        <div class="progress-bar {% if current_score >= 40 %}bg-success{% endif %} rounded"
+                             style="width: {{ current_score }}%">
+                        </div>
+                    </div>
+                    <small class="text-muted d-flex align-items-center">
+                        <i class="fas fa-bullseye me-2"></i>Target: 40%
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-3">Total Responses</h3>
+                    <h2 class="display-3 fw-bold">{{ total_responses }}</h2>
+                    <small class="text-muted d-flex align-items-center">
+                        <i class="fas fa-users me-2"></i>Survey Participants
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="row g-4">
+        <!-- PMF Trend Chart (Full Width) -->
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">PMF Score Trend</h3>
+                    <div id="pmfTrendChart" style="height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Charts -->
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Segment Distribution</h3>
+                    <div id="segmentChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Disappointment Analysis</h3>
+                    <div id="disappointmentChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Missing Features</h3>
+                    <div id="missingChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Most Used Features</h3>
+                    <div id="mostUsedChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Product Rating Distribution</h3>
+                    <div id="ratingChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                    <h3 class="h4 mb-4">Satisfaction Levels</h3>
+                    <div id="satisfactionChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+.dashboard {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.progress {
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1rem !important;
+    }
+    
+    .h2 {
+        font-size: 1.5rem;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem !important;
+    }
+}
+</style>
+
+<script>
+// Initialize all charts with pre-parsed JSON data
+const charts = {
+    pmfTrend: JSON.parse('{{ pmf_trend_chart|escapejs }}'),
+    segment: JSON.parse('{{ segment_chart|escapejs }}'),
+    missing: JSON.parse('{{ missing_chart|escapejs }}'),
+    mostUsed: JSON.parse('{{ most_used_chart|escapejs }}'),
+    disappointment: JSON.parse('{{ disappointment_chart|escapejs }}'),
+    rating: JSON.parse('{{ rating_chart|escapejs }}'),
+    satisfaction: JSON.parse('{{ satisfaction_chart|escapejs }}')
+};
+
+// Wait for DOM to be fully loaded before creating charts
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Plotly is loaded
+    if (typeof Plotly === 'undefined') {
+        console.error('Plotly is not loaded');
+        return;
+    }
+
+    // Function to safely create a plot
+    function createPlot(elementId, chartData) {
+        const element = document.getElementById(elementId);
+        if (!element) {
+            console.error(`Element with id '${elementId}' not found`);
+            return;
+        }
+        try {
+            Plotly.newPlot(elementId, chartData.data, chartData.layout);
+        } catch (error) {
+            console.error(`Error creating plot for ${elementId}:`, error);
+        }
+    }
+
+    // Create each plot individually with error handling
+    createPlot('pmfTrendChart', charts.pmfTrend);
+    createPlot('segmentChart', charts.segment);
+    createPlot('missingChart', charts.missing);
+    createPlot('mostUsedChart', charts.mostUsed);
+    createPlot('disappointmentChart', charts.disappointment);
+    createPlot('ratingChart', charts.rating);
+    createPlot('satisfactionChart', charts.satisfaction);
+});
+
+function calculatePMF() {
+    fetch('/calculate-pmf/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            }
+        });
+}
+</script>
+{% endblock %}
