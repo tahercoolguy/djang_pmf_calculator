@@ -22,18 +22,41 @@
                             {% endfor %}
                         </select>
                         <div class="select-arrow"></div>
+                        <div class="invalid-feedback">Please select your occupation</div>
                     </div>
                 </section>
 
                 <section class="question" data-question="2">
-                    <h2>How would you feel if you could no longer use Level?</h2>
+                    <h2 class="pmf-question">
+                        <!-- <span class="important-marker">Important</span> -->
+                        How would you feel if you could no longer use Level?
+                    </h2>
+                    <!-- <p class="question-description">Please consider this carefully - your answer helps us understand how valuable our product is to you.</p> -->
                     <div class="disappointment-options">
-                        {% for value, label in form.disappointment_level.field.choices %}
-                        <div class="option-card" onclick="selectOption('disappointment_{{ value }}')">
-                            <input type="radio" name="disappointment_level" value="{{ value }}" id="disappointment_{{ value }}" required>
-                            <label for="disappointment_{{ value }}">{{ label }}</label>
+                        <div class="option-card" onclick="selectOption('disappointment_very_disappointed')">
+                            <input type="radio" name="disappointment_level" value="very_disappointed" id="disappointment_very_disappointed" required>
+                            <label for="disappointment_very_disappointed">
+                                <span class="emoji">😢</span>
+                                <span class="option-title">Very disappointed</span>
+                                <span class="option-description">Level has become essential to my workflow</span>
+                            </label>
                         </div>
-                        {% endfor %}
+                        <div class="option-card" onclick="selectOption('disappointment_somewhat_disappointed')">
+                            <input type="radio" name="disappointment_level" value="somewhat_disappointed" id="disappointment_somewhat_disappointed" required>
+                            <label for="disappointment_somewhat_disappointed">
+                                <span class="emoji">😕</span>
+                                <span class="option-title">Somewhat disappointed</span>
+                                <span class="option-description">I would miss some features but could manage without</span>
+                            </label>
+                        </div>
+                        <div class="option-card" onclick="selectOption('disappointment_not_disappointed')">
+                            <input type="radio" name="disappointment_level" value="not_disappointed" id="disappointment_not_disappointed" required>
+                            <label for="disappointment_not_disappointed">
+                                <span class="emoji">😐</span>
+                                <span class="option-title">Not disappointed</span>
+                                <span class="option-description">I could easily find an alternative</span>
+                            </label>
+                        </div>
                     </div>
                 </section>
 
@@ -348,6 +371,137 @@ textarea.form-control {
 .custom-select option {
     padding: 10px;
 }
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.error {
+    border-color: #dc3545 !important;
+}
+
+.error + .invalid-feedback {
+    display: block;
+}
+
+.disappointment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.option-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.option-card.selected {
+    background: #e3f2fd;
+    border: 2px solid #2196f3;
+}
+
+.option-card label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.emoji {
+    font-size: 2rem;
+    grid-row: span 2;
+}
+
+.option-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.option-description {
+    font-size: 0.9rem;
+    color: #666;
+    grid-column: 2;
+}
+
+/* Animation for selection */
+.option-card.selected {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .option-card label {
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+    }
+
+    .emoji {
+        font-size: 1.5rem;
+    }
+
+    .option-title {
+        font-size: 1rem;
+    }
+
+    .option-description {
+        font-size: 0.8rem;
+    }
+}
+
+.pmf-question {
+    border-left: 4px solid #e74c3c;
+    padding-left: 15px;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.important-marker {
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.question-description {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+textarea.form-control {
+    border: 2px solid #e74c3c;
+}
+
+textarea.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    border-color: #e74c3c;
+}
 </style>
 
 <script>
@@ -377,7 +531,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function moveToNextQuestion() {
-        if (currentQuestion < questions.length - 1) {
+        const currentQuestionEl = questions[currentQuestion];
+        
+        // Check if current question is valid
+        const select = currentQuestionEl.querySelector('select');
+        const radios = currentQuestionEl.querySelectorAll('input[type="radio"]');
+        const textarea = currentQuestionEl.querySelector('textarea');
+        
+        let isValid = true;
+        
+        if (select) {
+            if (!select.value) {
+                select.classList.add('error');
+                isValid = false;
+            } else {
+                select.classList.remove('error');
+            }
+        }
+        
+        if (radios.length) {
+            const checked = Array.from(radios).some(radio => radio.checked);
+            if (!checked) {
+                const container = radios[0].closest('.disappointment-options, .rating-grid');
+                container.insertAdjacentHTML('afterend', '<div class="invalid-feedback">Please select an option</div>');
+                isValid = false;
+            } else {
+                const errorMsg = currentQuestionEl.querySelector('.invalid-feedback');
+                if (errorMsg) errorMsg.remove();
+            }
+        }
+        
+        if (textarea) {
+            if (!textarea.value.trim()) {
+                textarea.classList.add('error');
+                if (!textarea.nextElementSibling?.classList.contains('invalid-feedback')) {
+                    textarea.insertAdjacentHTML('afterend', '<div class="invalid-feedback">Please enter your response</div>');
+                }
+                isValid = false;
+            } else {
+                textarea.classList.remove('error');
+                const errorMsg = textarea.nextElementSibling;
+                if (errorMsg?.classList.contains('invalid-feedback')) {
+                    errorMsg.remove();
+                }
+            }
+        }
+        
+        if (isValid && currentQuestion < questions.length - 1) {
             currentQuestion++;
             showQuestion(currentQuestion);
         }
