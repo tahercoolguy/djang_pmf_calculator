@@ -13,13 +13,19 @@
             <div class="question-container">
                 <!-- Each question is wrapped in its own section -->
                 <section class="question" data-question="1">
-                    <h2>What do you do?</h2>
+                    <h2>👋 What do you do?</h2>
                     <div class="select-wrapper">
                         <select name="occupation" id="occupation" class="form-select custom-select" required>
-                            <option value="" disabled selected>Choose your occupation</option>
-                            {% for value, label in form.occupation.field.choices %}
-                            <option value="{{ value }}">{{ label }}</option>
-                            {% endfor %}
+                            <option value="" disabled selected>🎯 Choose your occupation</option>
+                            <option value="developer">👨‍💻 Developer</option>
+                            <option value="designer">🎨 Designer</option>
+                            <option value="manager">👔 Manager</option>
+                            <option value="founder">🚀 Founder</option>
+                            <option value="video_editor">🎥 Video Editor</option>
+                            <option value="marketer">📢 Marketer</option>
+                            <option value="student">📚 Student</option>
+                            <option value="researcher">🔬 Researcher</option>
+                            <option value="other">✨ Other</option>
                         </select>
                         <div class="select-arrow"></div>
                         <div class="invalid-feedback">Please select your occupation</div>

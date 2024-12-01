@@ -8,6 +8,10 @@ class Survey(models.Model):
         ('designer', 'Designer'),
         ('manager', 'Manager'),
         ('founder', 'Founder'),
+        ('video_editor', 'Video Editor'),
+        ('marketer', 'Marketer'),
+        ('student', 'Student'), 
+        ('researcher', 'Researcher'),
         ('other', 'Other'),
     ]
 
