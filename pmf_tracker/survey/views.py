@@ -386,9 +386,7 @@ class PriceDashboardView(TemplateView):
             avg_payg=Avg('payg_too_expensive'),
             avg_monthly=Avg('too_expensive'),
             avg_annual=Avg('annual_too_expensive'),
-            response_count=Count('preferred_plan'),
-            # Add satisfaction or value metric if available
-            satisfaction=Avg('satisfaction_score')  # If you have this field
+            response_count=Count('preferred_plan')
         ).order_by('preferred_plan')
 
         fig = go.Figure()

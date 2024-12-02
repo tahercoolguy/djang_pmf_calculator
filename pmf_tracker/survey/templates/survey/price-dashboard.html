@@ -1,163 +1,171 @@
-{% extends "base.html" %}
-{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Survey Dashboard</title>
+    <!-- Add Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Remove extends and load tags, replace with direct HTML structure -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Price Survey Dashboard</h1>
 
-{% block content %}
-<div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">Price Survey Dashboard</h1>
-
-    <!-- Response Counter -->
-    <div class="bg-white rounded-lg shadow p-6 mb-8">
-        <h2 class="text-xl font-semibold mb-2">Total Survey Responses</h2>
-        <p class="text-4xl font-bold text-blue-600">{{ total_responses }}</p>
-        <p class="text-gray-600 mt-2">Sample size for pricing decisions. Higher numbers (>100) indicate more reliable data.</p>
-    </div>
-
-    <!-- Charts Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Pay As You Go Analysis -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-semibold mb-4">Pay As You Go Pricing Analysis</h3>
-            <div class="text-gray-600 mb-4">
-                <p class="mb-2">How to interpret:</p>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>The <span class="text-red-500">red line</span> shows when customers think it's too expensive</li>
-                    <li>The <span class="text-blue-500">blue line</span> shows when it's perceived as too cheap</li>
-                    <li>The <strong>intersection point</strong> suggests the optimal price point</li>
-                    <li>Consider pricing slightly below the intersection for market penetration</li>
-                </ul>
-                <p class="font-semibold">Decision Making:</p>
-                <p>Set your per-generation price near the intersection point. If the lines don't intersect, consider tiered pricing.</p>
-            </div>
-            <div id="paygAnalysis" class="w-full h-[400px]"></div>
+        <!-- Response Counter -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-2">Total Survey Responses</h2>
+            <p class="text-4xl font-bold text-blue-600">{{ total_responses }}</p>
+            <p class="text-gray-600 mt-2">Sample size for pricing decisions. Higher numbers (>100) indicate more reliable data.</p>
         </div>
 
-        <!-- Monthly Plan Analysis -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-semibold mb-4">Monthly Plan Pricing Analysis</h3>
-            <div class="text-gray-600 mb-4">
-                <p class="mb-2">How to interpret:</p>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Look for the price point with highest acceptance (intersection)</li>
-                    <li>Consider your costs and profit margins at this point</li>
-                    <li>Check if the optimal price aligns with your business model</li>
-                </ul>
-                <p class="font-semibold">Decision Making:</p>
-                <p>Price monthly plans 15-20% below the intersection point to encourage subscription over pay-as-you-go.</p>
-            </div>
-            <div id="monthlyAnalysis" class="w-full h-[400px]"></div>
-        </div>
-
-        <!-- Annual Plan Analysis -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-semibold mb-4">Annual Plan Pricing Analysis</h3>
-            <div class="text-gray-600 mb-4">
-                <p class="mb-2">How to interpret:</p>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Compare monthly equivalent cost to monthly plan pricing</li>
-                    <li>Look for price points that encourage annual commitment</li>
-                    <li>Consider offering 2-3 months free equivalent in annual plans</li>
-                </ul>
-                <p class="font-semibold">Decision Making:</p>
-                <p>Set annual price to provide 15-20% savings compared to monthly plan to incentivize longer commitments.</p>
-            </div>
-            <div id="annualAnalysis" class="w-full h-[400px]"></div>
-        </div>
-
-        <!-- Plan Distribution -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-semibold mb-4">Preferred Plan Distribution</h3>
-            <div class="text-gray-600 mb-4">
-                <p class="mb-2">How to interpret:</p>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Larger segments show more popular pricing models</li>
-                    <li>Use this to guide marketing focus and resource allocation</li>
-                    <li>Consider if distribution aligns with business goals</li>
-                </ul>
-                <p class="font-semibold">Decision Making:</p>
-                <p>Focus marketing and optimization efforts on the most preferred plans. If a plan has low preference, consider redesigning or removing it.</p>
-            </div>
-            <div id="preferredPlanChart" class="w-full h-[400px]"></div>
-        </div>
-
-        <!-- Value Perception -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-semibold mb-4">Price-Value Perception</h3>
-            <div class="text-gray-600 mb-4">
-                <p class="mb-2">How to interpret:</p>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Larger bubbles = More responses at that price point</li>
-                    <li>Higher position = Better value perception</li>
-                    <li>Right position = Higher price point</li>
-                    <li>Ideal spots are top-right quadrant (high value, acceptable price)</li>
-                </ul>
-                <p class="font-semibold">Decision Making:</p>
-                <p>Target price points where large bubbles appear in the top-right quadrant, indicating high value perception at profitable price points.</p>
-            </div>
-            <div id="valuePerception" class="w-full h-[400px]"></div>
-        </div>
-    </div>
-
-    <!-- Overall Pricing Strategy Recommendations -->
-    <div class="bg-white rounded-lg shadow p-6 mt-8">
-        <h3 class="text-lg font-semibold mb-4">Making Strategic Pricing Decisions</h3>
-        <div class="text-gray-600">
-            <ol class="list-decimal ml-6 space-y-2">
-                <li>Start with the Value Perception chart to understand overall price sensitivity</li>
-                <li>Use Price Sensitivity Analysis to fine-tune specific price points</li>
-                <li>Check Plan Distribution to validate if your pricing strategy aligns with customer preferences</li>
-                <li>Consider these factors when setting final prices:
-                    <ul class="list-disc ml-6 mt-2">
-                        <li>Your costs and desired margins</li>
-                        <li>Competitor pricing</li>
-                        <li>Market positioning (premium vs. value)</li>
-                        <li>Long-term customer retention goals</li>
+        <!-- Charts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Pay As You Go Analysis -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">Pay As You Go Pricing Analysis</h3>
+                <div class="text-gray-600 mb-4">
+                    <p class="mb-2">How to interpret:</p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>The <span class="text-red-500">red line</span> shows when customers think it's too expensive</li>
+                        <li>The <span class="text-blue-500">blue line</span> shows when it's perceived as too cheap</li>
+                        <li>The <strong>intersection point</strong> suggests the optimal price point</li>
+                        <li>Consider pricing slightly below the intersection for market penetration</li>
                     </ul>
-                </li>
-            </ol>
+                    <p class="font-semibold">Decision Making:</p>
+                    <p>Set your per-generation price near the intersection point. If the lines don't intersect, consider tiered pricing.</p>
+                </div>
+                <div id="paygAnalysis" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- Monthly Plan Analysis -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">Monthly Plan Pricing Analysis</h3>
+                <div class="text-gray-600 mb-4">
+                    <p class="mb-2">How to interpret:</p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>Look for the price point with highest acceptance (intersection)</li>
+                        <li>Consider your costs and profit margins at this point</li>
+                        <li>Check if the optimal price aligns with your business model</li>
+                    </ul>
+                    <p class="font-semibold">Decision Making:</p>
+                    <p>Price monthly plans 15-20% below the intersection point to encourage subscription over pay-as-you-go.</p>
+                </div>
+                <div id="monthlyAnalysis" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- Annual Plan Analysis -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">Annual Plan Pricing Analysis</h3>
+                <div class="text-gray-600 mb-4">
+                    <p class="mb-2">How to interpret:</p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>Compare monthly equivalent cost to monthly plan pricing</li>
+                        <li>Look for price points that encourage annual commitment</li>
+                        <li>Consider offering 2-3 months free equivalent in annual plans</li>
+                    </ul>
+                    <p class="font-semibold">Decision Making:</p>
+                    <p>Set annual price to provide 15-20% savings compared to monthly plan to incentivize longer commitments.</p>
+                </div>
+                <div id="annualAnalysis" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- Plan Distribution -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">Preferred Plan Distribution</h3>
+                <div class="text-gray-600 mb-4">
+                    <p class="mb-2">How to interpret:</p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>Larger segments show more popular pricing models</li>
+                        <li>Use this to guide marketing focus and resource allocation</li>
+                        <li>Consider if distribution aligns with business goals</li>
+                    </ul>
+                    <p class="font-semibold">Decision Making:</p>
+                    <p>Focus marketing and optimization efforts on the most preferred plans. If a plan has low preference, consider redesigning or removing it.</p>
+                </div>
+                <div id="preferredPlanChart" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- Value Perception -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">Price-Value Perception</h3>
+                <div class="text-gray-600 mb-4">
+                    <p class="mb-2">How to interpret:</p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>Larger bubbles = More responses at that price point</li>
+                        <li>Higher position = Better value perception</li>
+                        <li>Right position = Higher price point</li>
+                        <li>Ideal spots are top-right quadrant (high value, acceptable price)</li>
+                    </ul>
+                    <p class="font-semibold">Decision Making:</p>
+                    <p>Target price points where large bubbles appear in the top-right quadrant, indicating high value perception at profitable price points.</p>
+                </div>
+                <div id="valuePerception" class="w-full h-[400px]"></div>
+            </div>
+        </div>
+
+        <!-- Overall Pricing Strategy Recommendations -->
+        <div class="bg-white rounded-lg shadow p-6 mt-8">
+            <h3 class="text-lg font-semibold mb-4">Making Strategic Pricing Decisions</h3>
+            <div class="text-gray-600">
+                <ol class="list-decimal ml-6 space-y-2">
+                    <li>Start with the Value Perception chart to understand overall price sensitivity</li>
+                    <li>Use Price Sensitivity Analysis to fine-tune specific price points</li>
+                    <li>Check Plan Distribution to validate if your pricing strategy aligns with customer preferences</li>
+                    <li>Consider these factors when setting final prices:
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Your costs and desired margins</li>
+                            <li>Competitor pricing</li>
+                            <li>Market positioning (premium vs. value)</li>
+                            <li>Long-term customer retention goals</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
-</div>
 
-{% block extra_js %}
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script>
-    // Initialize all charts
-    document.addEventListener('DOMContentLoaded', function() {
-        // PAYG Analysis
-        const paygData = JSON.parse('{{ payg_analysis|safe }}');
-        Plotly.newPlot('paygAnalysis', paygData.data, paygData.layout);
+    <!-- Move script block directly into body -->
+    <script>
+        // Initialize all charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // PAYG Analysis
+            const paygData = JSON.parse('{{ payg_analysis|safe }}');
+            Plotly.newPlot('paygAnalysis', paygData.data, paygData.layout);
 
-        // Monthly Analysis
-        const monthlyData = JSON.parse('{{ monthly_analysis|safe }}');
-        Plotly.newPlot('monthlyAnalysis', monthlyData.data, monthlyData.layout);
+            // Monthly Analysis
+            const monthlyData = JSON.parse('{{ monthly_analysis|safe }}');
+            Plotly.newPlot('monthlyAnalysis', monthlyData.data, monthlyData.layout);
 
-        // Annual Analysis
-        const annualData = JSON.parse('{{ annual_analysis|safe }}');
-        Plotly.newPlot('annualAnalysis', annualData.data, annualData.layout);
+            // Annual Analysis
+            const annualData = JSON.parse('{{ annual_analysis|safe }}');
+            Plotly.newPlot('annualAnalysis', annualData.data, annualData.layout);
 
-        // Preferred Plan Distribution
-        const planData = JSON.parse('{{ preferred_plan_chart|safe }}');
-        Plotly.newPlot('preferredPlanChart', planData.data, planData.layout);
+            // Preferred Plan Distribution
+            const planData = JSON.parse('{{ preferred_plan_chart|safe }}');
+            Plotly.newPlot('preferredPlanChart', planData.data, planData.layout);
 
-        // Value Perception
-        const valueData = JSON.parse('{{ value_perception|safe }}');
-        Plotly.newPlot('valuePerception', valueData.data, valueData.layout);
+            // Value Perception
+            const valueData = JSON.parse('{{ value_perception|safe }}');
+            Plotly.newPlot('valuePerception', valueData.data, valueData.layout);
 
-        // Make charts responsive
-        window.addEventListener('resize', function() {
-            const charts = [
-                'paygAnalysis',
-                'monthlyAnalysis',
-                'annualAnalysis',
-                'preferredPlanChart',
-                'valuePerception'
-            ];
-            
-            charts.forEach(chart => {
-                Plotly.Plots.resize(document.getElementById(chart));
+            // Make charts responsive
+            window.addEventListener('resize', function() {
+                const charts = [
+                    'paygAnalysis',
+                    'monthlyAnalysis',
+                    'annualAnalysis',
+                    'preferredPlanChart',
+                    'valuePerception'
+                ];
+                
+                charts.forEach(chart => {
+                    Plotly.Plots.resize(document.getElementById(chart));
+                });
             });
         });
-    });
-</script>
-{% endblock %}
-{% endblock %}
+    </script>
+</body>
+</html>
