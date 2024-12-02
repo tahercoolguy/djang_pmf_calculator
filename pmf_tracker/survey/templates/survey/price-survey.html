@@ -38,34 +38,8 @@
             
             <div class="content-wrapper">
                 <div class="question-container">
-                    <!-- Current Plans Section -->
+                    <!-- Update data-question numbers for all subsequent sections -->
                     <section class="question" data-question="1">
-                        <h2>{% trans "Our Current Plans" %}</h2>
-                        <div class="pricing-cards">
-                            <div class="pricing-card">
-                                <h3>Pay As You Go</h3>
-                                <div class="price">$1.99</div>
-                                <div class="feature">10 AI Generations</div>
-                            </div>
-                            <div class="pricing-card">
-                                <h3>Monthly Unlimited</h3>
-                                <div class="price">$24.99</div>
-                                <div class="feature">Unlimited Generations</div>
-                                <div class="duration">per month</div>
-                            </div>
-                            <div class="pricing-card featured">
-                                <div class="best-value">Best Value</div>
-                                <h3>Annual Unlimited</h3>
-                                <div class="price">$210</div>
-                                <div class="feature">Unlimited Generations</div>
-                                <div class="duration">per year</div>
-                                <div class="savings">Save 30%</div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Price Sensitivity Questions -->
-                    <section class="question" data-question="2">
                         <h2>{% trans "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('payg_too_expensive_2_99')">
@@ -92,7 +66,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="3">
+                    <section class="question" data-question="2">
                         <h2>{% trans "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('payg_too_cheap_0_99')">
@@ -119,7 +93,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="4">
+                    <section class="question" data-question="3">
                         <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('too_expensive_49')">
@@ -137,7 +111,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="5">
+                    <section class="question" data-question="4">
                         <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('too_cheap_9')">
@@ -155,7 +129,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="6">
+                    <section class="question" data-question="5">
                         <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('expensive_29')">
@@ -173,7 +147,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="7">
+                    <section class="question" data-question="6">
                         <h2>{% trans "At what price would you consider our Annual Unlimited plan to be too expensive?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('annual_too_expensive_299')">
@@ -200,7 +174,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="8">
+                    <section class="question" data-question="7">
                         <h2>{% trans "At what price would you consider our Annual Unlimited plan to be a great deal?" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('annual_bargain_179')">
@@ -230,7 +204,7 @@
                         </div>
                     </section>
 
-                    <section class="question" data-question="9">
+                    <section class="question" data-question="8">
                         <h2>{% trans "Which pricing plan would you be most likely to choose?" %}</h2>
                         <div class="plan-selection">
                             <div class="option-card" onclick="selectOption('plan_pay_go')">
