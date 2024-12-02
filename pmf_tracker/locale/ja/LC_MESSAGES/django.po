@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+ # Japanese (ja)
+msgid "👋 What do you do?"
+msgstr "👋 お仕事は何ですか？"
+
+msgid "🎯 Choose your occupation"
+msgstr "🎯 職業を選択してください"
+
+msgid "👨‍💻 Developer"
+msgstr "👨‍💻 開発者"
+
+msgid "🎨 Designer"
+msgstr "🎨 デザイナー"
+
+msgid "👔 Manager"
+msgstr "👔 マネージャー"
+
+msgid "🚀 Founder"
+msgstr "🚀 創業者"
+
+msgid "🎥 Video Editor"
+msgstr "🎥 動画編集者"
+
+msgid "📢 Marketer"
+msgstr "📢 マーケター"
+
+msgid "📚 Student"
+msgstr "📚 学生"
+
+msgid "🔬 Researcher"
+msgstr "🔬 研究者"
+
+msgid "✨ Other"
+msgstr "✨ その他"
+
+msgid "How would you feel if you could no longer use Level?"
+msgstr "もしLevelが使えなくなったらどう感じますか？"
+
+msgid "Very disappointed"
+msgstr "とても残念"
+
+msgid "Level has become essential to my workflow"
+msgstr "Levelは私の作業フローに不可欠になっています"
+
+msgid "Somewhat disappointed"
+msgstr "やや残念"
+
+msgid "I would miss some features but could manage without"
+msgstr "いくつかの機能は恋しくなりますが、なくても何とかなります"
+
+msgid "Not disappointed"
+msgstr "特に残念ではない"
+
+msgid "I could easily find an alternative"
+msgstr "簡単に代替品を見つけられます"
+
+msgid "What was missing or disappointing in your experience with us?"
+msgstr "私たちのサービスで物足りなかった点や失望した点は何ですか？"
+
+msgid "Which feature do you use the most in our application?"
+msgstr "アプリケーションで最もよく使用する機能は何ですか？"
+
+msgid "How satisfied were you with your experience?"
+msgstr "体験にどの程度満足されましたか？"
+
+msgid "What would you like to rate us?"
+msgstr "評価をお願いします"
+
+msgid "Previous"
+msgstr "前へ"
+
+msgid "Next"
+msgstr "次へ"
+
+msgid "Submit"
+msgstr "送信"
+
+msgid "Please select your occupation"
+msgstr "職業を選択してください"
+
+msgid "Please select an option"
+msgstr "オプションを選択してください"
+
+msgid "Please enter your response"
+msgstr "回答を入力してください"
+
+msgid "Our Current Plans"
+msgstr "現在のプラン"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+msgstr "従量制プラン（10回生成）がどの価格なら高すぎると感じますか？"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgstr "従量制プラン（10回生成）がどの価格なら安すぎて品質が疑わしいと感じますか？"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgstr "月額無制限プランがどの価格なら高すぎて購入を検討しないと感じますか？"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgstr "月額無制限プランがどの価格なら安すぎて品質が疑わしいと感じますか？"
+
+msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
+msgstr "年間無制限プランがどの価格なら高すぎると感じますか？"
+
+msgid "Which pricing plan would you be most likely to choose?"
+msgstr "どのプランを選択する可能性が最も高いですか？"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgstr "月額無制限プランがどの価格なら高くなり始めますが、まだ購入を検討しますか？"
+
+msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgstr "年間無制限プランがどの価格なら非常にお得と感じますか？"

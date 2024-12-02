@@ -1,83 +1,98 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 <div class="survey-container">
+    <div class="language-selector">
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language" onchange="this.form.submit()">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
     <div class="progress-bar">
         <div class="progress" id="progressBar"></div>
     </div>
     
-    <form method="post" id="surveyForm" class="needs-validation" novalidate>
+    <form method="post" id="surveyForm" class="needs-validation" action="{% url 'survey_submit' %}" novalidate>
         {% csrf_token %}
         
         <div class="content-wrapper">
             <div class="question-container">
-                <!-- Each question is wrapped in its own section -->
                 <section class="question" data-question="1">
-                    <h2>👋 What do you do?</h2>
+                    <h2>{% trans "👋 What do you do?" %}</h2>
                     <div class="select-wrapper">
                         <select name="occupation" id="occupation" class="form-select custom-select" required>
-                            <option value="" disabled selected>🎯 Choose your occupation</option>
-                            <option value="developer">👨‍💻 Developer</option>
-                            <option value="designer">🎨 Designer</option>
-                            <option value="manager">👔 Manager</option>
-                            <option value="founder">🚀 Founder</option>
-                            <option value="video_editor">🎥 Video Editor</option>
-                            <option value="marketer">📢 Marketer</option>
-                            <option value="student">📚 Student</option>
-                            <option value="researcher">🔬 Researcher</option>
-                            <option value="other">✨ Other</option>
+                            <option value="" disabled selected>{% trans "🎯 Choose your occupation" %}</option>
+                            <option value="developer">{% trans "👨‍💻 Developer" %}</option>
+                            <option value="designer">{% trans "🎨 Designer" %}</option>
+                            <option value="manager">{% trans "👔 Manager" %}</option>
+                            <option value="founder">{% trans "🚀 Founder" %}</option>
+                            <option value="video_editor">{% trans "🎥 Video Editor" %}</option>
+                            <option value="marketer">{% trans "📢 Marketer" %}</option>
+                            <option value="student">{% trans "📚 Student" %}</option>
+                            <option value="researcher">{% trans "🔬 Researcher" %}</option>
+                            <option value="other">{% trans "✨ Other" %}</option>
                         </select>
                         <div class="select-arrow"></div>
-                        <div class="invalid-feedback">Please select your occupation</div>
+                        <div class="invalid-feedback">{% trans "Please select your occupation" %}</div>
                     </div>
                 </section>
 
                 <section class="question" data-question="2">
                     <h2 class="pmf-question">
-                        <!-- <span class="important-marker">Important</span> -->
-                        How would you feel if you could no longer use Level?
+                        {% trans "How would you feel if you could no longer use Level?" %}
                     </h2>
-                    <!-- <p class="question-description">Please consider this carefully - your answer helps us understand how valuable our product is to you.</p> -->
                     <div class="disappointment-options">
                         <div class="option-card" onclick="selectOption('disappointment_very_disappointed')">
                             <input type="radio" name="disappointment_level" value="very_disappointed" id="disappointment_very_disappointed" required>
                             <label for="disappointment_very_disappointed">
                                 <span class="emoji">😢</span>
-                                <span class="option-title">Very disappointed</span>
-                                <span class="option-description">Level has become essential to my workflow</span>
+                                <span class="option-title">{% trans "Very disappointed" %}</span>
+                                <span class="option-description">{% trans "Level has become essential to my workflow" %}</span>
                             </label>
                         </div>
                         <div class="option-card" onclick="selectOption('disappointment_somewhat_disappointed')">
                             <input type="radio" name="disappointment_level" value="somewhat_disappointed" id="disappointment_somewhat_disappointed" required>
                             <label for="disappointment_somewhat_disappointed">
                                 <span class="emoji">😕</span>
-                                <span class="option-title">Somewhat disappointed</span>
-                                <span class="option-description">I would miss some features but could manage without</span>
+                                <span class="option-title">{% trans "Somewhat disappointed" %}</span>
+                                <span class="option-description">{% trans "I would miss some features but could manage without" %}</span>
                             </label>
                         </div>
                         <div class="option-card" onclick="selectOption('disappointment_not_disappointed')">
                             <input type="radio" name="disappointment_level" value="not_disappointed" id="disappointment_not_disappointed" required>
                             <label for="disappointment_not_disappointed">
                                 <span class="emoji">😐</span>
-                                <span class="option-title">Not disappointed</span>
-                                <span class="option-description">I could easily find an alternative</span>
+                                <span class="option-title">{% trans "Not disappointed" %}</span>
+                                <span class="option-description">{% trans "I could easily find an alternative" %}</span>
                             </label>
                         </div>
                     </div>
                 </section>
 
                 <section class="question" data-question="3">
-                    <h2>What was missing or disappointing in your experience with us?</h2>
+                    <h2>{% trans "What was missing or disappointing in your experience with us?" %}</h2>
                     <textarea name="missing_features" class="form-control" rows="4" required></textarea>
                 </section>
 
                 <section class="question" data-question="4">
-                    <h2>Which feature do you use the most in our application?</h2>
+                    <h2>{% trans "Which feature do you use the most in our application?" %}</h2>
                     <textarea name="most_used_feature" class="form-control" rows="4" required></textarea>
                 </section>
 
                 <section class="question" data-question="5">
-                    <h2>How satisfied were you with your experience?</h2>
+                    <h2>{% trans "How satisfied were you with your experience?" %}</h2>
                     <div class="rating-grid">
                         {% for i in "12345"|make_list %}
                         <div class="rating-card" onclick="selectOption('satisfaction_{{ i }}')">
@@ -94,7 +109,7 @@
                 </section>
 
                 <section class="question" data-question="6">
-                    <h2>What would you like to rate us?</h2>
+                    <h2>{% trans "What would you like to rate us?" %}</h2>
                     <div class="rating-grid">
                         {% for i in "12345"|make_list %}
                         <div class="rating-card" onclick="selectOption('rating_{{ i }}')">
@@ -112,12 +127,19 @@
             </div>
 
             <div class="navigation-buttons">
-                <button type="button" id="prevBtn" class="btn btn-secondary">Previous</button>
-                <button type="button" id="nextBtn" class="btn btn-primary">Next</button>
-                <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">Submit</button>
+                <button type="button" id="prevBtn" class="btn btn-secondary">{% trans "Previous" %}</button>
+                <button type="button" id="nextBtn" class="btn btn-primary">{% trans "Next" %}</button>
+                <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">{% trans "Submit" %}</button>
             </div>
         </div>
     </form>
+</div>
+
+<div class="loading-overlay" id="loadingOverlay" style="display: none;">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <p>{% trans "Calculating PMF Score..." %}</p>
+    </div>
 </div>
 
 <style>
@@ -508,6 +530,86 @@ textarea.form-control:focus {
     box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
     border-color: #e74c3c;
 }
+
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-selector select {
+    padding: 8px 30px 8px 15px;
+    border: 2px solid #e3e3e3;
+    border-radius: 20px;
+    background: white;
+    font-size: 14px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.language-selector select:hover {
+    border-color: #3498db;
+}
+
+.language-selector::after {
+    content: "🌐";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .language-selector select {
+        padding: 6px 25px 6px 10px;
+        font-size: 12px;
+    }
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 </style>
 
 <script>
@@ -628,6 +730,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize first question
     showQuestion(0);
+
+    // Get browser language and clean it to match your format (e.g., 'en' instead of 'en-US')
+    const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
+    const currentLang = document.documentElement.lang.split('-')[0];
+    
+    // Check if we've already redirected to prevent loops
+    const hasRedirected = sessionStorage.getItem('languageRedirected');
+    
+    // Only redirect if:
+    // 1. We haven't redirected before
+    // 2. Browser language doesn't match current language
+    if (!hasRedirected && browserLang !== currentLang) {
+        // Find the closest matching language
+        const closestLang = findClosestLanguage(browserLang);
+        if (closestLang) {
+            // Mark that we've handled the redirect
+            sessionStorage.setItem('languageRedirected', 'true');
+            // Switch to browser language
+            document.querySelector('select[name="language"]').value = closestLang;
+            document.querySelector('.language-selector form').submit();
+        }
+    }
+
+    // Add form submission handler
+    const surveyForm = document.getElementById('surveyForm');
+    surveyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading overlay
+        document.getElementById('loadingOverlay').style.display = 'flex';
+        
+        const formData = new FormData(surveyForm);
+        
+        fetch(surveyForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(async response => {
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}, message: ${JSON.stringify(data)}`);
+            }
+            return data;
+        })
+        .then(data => {
+            if (data.success) {
+                window.location.href = data.redirect_url;
+            } else {
+                // Hide loading overlay on error
+                document.getElementById('loadingOverlay').style.display = 'none';
+                throw new Error(data.error || 'Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Detailed error:', error);
+            // Hide loading overlay on error
+            document.getElementById('loadingOverlay').style.display = 'none';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Submit';
+            alert('Sorry, there was an error submitting your survey. Please try again.');
+        });
+    });
 });
 
 function selectOption(id) {
@@ -664,5 +832,15 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+function findClosestLanguage(browserLang) {
+    const availableLangs = Array.from(document.querySelector('select[name="language"]').options).map(opt => opt.value);
+    const shortLang = browserLang.split('-')[0];
+    return availableLangs.find(lang => lang === browserLang || lang === shortLang) || null;
+}
+
+function getLanguageName(langCode) {
+    return document.querySelector(`select[name="language"] option[value="${langCode}"]`).textContent.trim();
+}
 </script>
 {% endblock %}

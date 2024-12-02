@@ -29,6 +29,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'survey.middleware.AutoLanguageMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -87,11 +89,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
@@ -112,3 +116,30 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('zh-hans', '简体中文'),
+    ('es', 'Español'),
+    ('ar', 'العربية'),
+    ('id', 'Bahasa Indonesia'),
+    ('pt', 'Português'),
+    ('fr', 'Français'),
+    ('ja', '日本語'),
+    ('ru', 'Русский'),
+    ('de', 'Deutsch'),
+    ('hi', 'हिन्दी'),
+    ('ko', '한국어'),
+    ('tr', 'Türkçe'),
+    ('vi', 'Tiếng Việt'),
+    ('it', 'Italiano'),
+    ('th', 'ไทย'),
+    ('pl', 'Polski'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
+# Session settings
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

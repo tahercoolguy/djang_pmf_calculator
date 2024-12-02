@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Polish (pl)
+msgid "👋 What do you do?"
+msgstr "👋 Czym się zajmujesz?"
+
+msgid "🎯 Choose your occupation"
+msgstr "🎯 Wybierz swój zawód"
+
+msgid "👨‍💻 Developer"
+msgstr "👨‍💻 Programista"
+
+msgid "🎨 Designer"
+msgstr "🎨 Projektant"
+
+msgid "👔 Manager"
+msgstr "👔 Menedżer"
+
+msgid "🚀 Founder"
+msgstr "🚀 Założyciel"
+
+msgid "🎥 Video Editor"
+msgstr "🎥 Montażysta wideo"
+
+msgid "📢 Marketer"
+msgstr "📢 Marketingowiec"
+
+msgid "📚 Student"
+msgstr "📚 Student"
+
+msgid "🔬 Researcher"
+msgstr "🔬 Badacz"
+
+msgid "✨ Other"
+msgstr "✨ Inne"
+
+msgid "How would you feel if you could no longer use Level?"
+msgstr "Jak byś się czuł(a), gdybyś nie mógł/mogła już korzystać z Level?"
+
+msgid "Very disappointed"
+msgstr "Bardzo rozczarowany(a)"
+
+msgid "Level has become essential to my workflow"
+msgstr "Level stał się niezbędny w moim procesie pracy"
+
+msgid "Somewhat disappointed"
+msgstr "Trochę rozczarowany(a)"
+
+msgid "I would miss some features but could manage without"
+msgstr "Brakowałoby mi niektórych funkcji, ale dałbym/dałabym sobie bez nich"
+
+msgid "Not disappointed"
+msgstr "Nie rozczarowany(a)"
+
+msgid "I could easily find an alternative"
+msgstr "Mógłbym/mogłabym łatwo znaleźć alternatywę"
+
+msgid "Our Current Plans"
+msgstr "Nasze Aktualne Plany"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Pay As You Go (10 generacji) za zbyt drogi?"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Pay As You Go (10 generacji) za zbyt tani, by być wiarygodnym?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Miesięczny Bez Limitu za tak drogi, że nie rozważałbyś jego zakupu?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Miesięczny Bez Limitu za tak tani, że kwestionowałbyś jego jakość?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Roczny Bez Limitu za zbyt drogi?"
+
+msgid "Which pricing plan would you be most likely to choose?"
+msgstr "Który plan cenowy najprawdopodobniej byś wybrał?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Miesięczny Bez Limitu za zbyt drogi, ale nadal byś go rozważał?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgstr "Przy jakiej cenie uznałbyś nasz plan Roczny Bez Limitu za fantastyczną ofertę?"

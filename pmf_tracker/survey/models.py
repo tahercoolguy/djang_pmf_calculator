@@ -16,17 +16,17 @@ class Survey(models.Model):
     ]
 
     DISAPPOINTMENT_CHOICES = [
-        ('very', 'Very disappointed'),
-        ('somewhat', 'Somewhat disappointed'),
-        ('not', 'Not disappointed'),
+        ('very_disappointed', 'Very disappointed'),
+        ('somewhat_disappointed', 'Somewhat disappointed'),
+        ('not_disappointed', 'Not disappointed'),
     ]
 
     occupation = models.CharField(max_length=50, choices=OCCUPATION_CHOICES)
-    disappointment_level = models.CharField(max_length=20, choices=DISAPPOINTMENT_CHOICES)
+    disappointment_level = models.CharField(max_length=50, choices=DISAPPOINTMENT_CHOICES)
     missing_features = models.TextField()
-    most_used_feature = models.CharField(max_length=100)
-    satisfaction_score = models.IntegerField(choices=[(i, i) for i in range(1, 11)])
-    rating = models.IntegerField(choices=[(i, i) for i in range(1, 11)])
+    most_used_feature = models.TextField()
+    satisfaction_score = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])
+    rating = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])
     created_at = models.DateTimeField(auto_now_add=True)
 
 
@@ -41,3 +41,33 @@ class PMFScore(models.Model):
 
     class Meta:
         ordering = ['-week_start']
+
+
+class PriceSurvey(models.Model):
+    # Pay As You Go pricing
+    payg_too_expensive = models.DecimalField(max_digits=5, decimal_places=2)
+    payg_too_cheap = models.DecimalField(max_digits=5, decimal_places=2)
+    
+    # Monthly plan pricing
+    too_expensive = models.DecimalField(max_digits=5, decimal_places=2)
+    too_cheap = models.DecimalField(max_digits=5, decimal_places=2)
+    expensive = models.DecimalField(max_digits=5, decimal_places=2)
+    
+    # Annual plan pricing
+    annual_too_expensive = models.DecimalField(max_digits=6, decimal_places=2)
+    annual_bargain = models.DecimalField(max_digits=6, decimal_places=2)
+    
+    # Plan preference
+    preferred_plan = models.CharField(
+        max_length=20,  # Changed from max_choices to max_length
+        choices=[
+            ('pay_go', 'Pay As You Go'),
+            ('monthly', 'Monthly Unlimited'),
+            ('annual', 'Annual Unlimited'),
+        ]
+    )
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']

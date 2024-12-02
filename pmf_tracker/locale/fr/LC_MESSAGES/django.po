@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# French (fr)
+msgid "👋 What do you do?"
+msgstr "👋 Que faites-vous ?"
+
+msgid "🎯 Choose your occupation"
+msgstr "🎯 Choisissez votre profession"
+
+msgid "👨‍💻 Developer"
+msgstr "👨‍💻 Développeur"
+
+msgid "🎨 Designer"
+msgstr "🎨 Designer"
+
+msgid "👔 Manager"
+msgstr "👔 Manager"
+
+msgid "🚀 Founder"
+msgstr "🚀 Fondateur"
+
+msgid "🎥 Video Editor"
+msgstr "🎥 Monteur Vidéo"
+
+msgid "📢 Marketer"
+msgstr "📢 Marketing"
+
+msgid "📚 Student"
+msgstr "📚 Étudiant"
+
+msgid "🔬 Researcher"
+msgstr "🔬 Chercheur"
+
+msgid "✨ Other"
+msgstr "✨ Autre"
+
+msgid "How would you feel if you could no longer use Level?"
+msgstr "Comment vous sentiriez-vous si vous ne pouviez plus utiliser Level ?"
+
+msgid "Very disappointed"
+msgstr "Très déçu"
+
+msgid "Level has become essential to my workflow"
+msgstr "Level est devenu essentiel à mon flux de travail"
+
+msgid "Somewhat disappointed"
+msgstr "Un peu déçu"
+
+msgid "I would miss some features but could manage without"
+msgstr "Certaines fonctionnalités me manqueraient mais je pourrais faire sans"
+
+msgid "Not disappointed"
+msgstr "Pas déçu"
+
+msgid "I could easily find an alternative"
+msgstr "Je pourrais facilement trouver une alternative"
+
+msgid "What was missing or disappointing in your experience with us?"
+msgstr "Qu'est-ce qui manquait ou était décevant dans votre expérience avec nous ?"
+
+msgid "Which feature do you use the most in our application?"
+msgstr "Quelle fonctionnalité utilisez-vous le plus dans notre application ?"
+
+msgid "How satisfied were you with your experience?"
+msgstr "Quel est votre niveau de satisfaction avec votre expérience ?"
+
+msgid "What would you like to rate us?"
+msgstr "Quelle note souhaitez-vous nous donner ?"
+
+msgid "Previous"
+msgstr "Précédent"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Submit"
+msgstr "Envoyer"
+
+msgid "Please select your occupation"
+msgstr "Veuillez sélectionner votre profession"
+
+msgid "Please select an option"
+msgstr "Veuillez sélectionner une option"
+
+msgid "Please enter your response"
+msgstr "Veuillez saisir votre réponse"
+
+msgid "Our Current Plans"
+msgstr "Nos Plans Actuels"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+msgstr "À quel prix considéreriez-vous notre forfait Pay As You Go (10 générations) comme trop cher ?"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgstr "À quel prix considéreriez-vous notre forfait Pay As You Go (10 générations) comme trop bon marché pour être fiable ?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgstr "À quel prix considéreriez-vous notre forfait Mensuel Illimité comme trop cher pour envisager son achat ?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgstr "À quel prix considéreriez-vous notre forfait Mensuel Illimité comme trop bas pour être fiable ?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
+msgstr "À quel prix considéreriez-vous notre forfait Annuel Illimité comme trop cher ?"
+
+msgid "Which pricing plan would you be most likely to choose?"
+msgstr "Quel forfait seriez-vous le plus susceptible de choisir ?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgstr "À quel prix considéreriez-vous notre forfait Mensuel Illimité comme commençant à être cher, mais vous l'envisageriez quand même ?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgstr "À quel prix considéreriez-vous notre forfait Annuel Illimité comme une excellente affaire ?"

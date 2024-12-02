@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Hindi (hi)
+msgid "👋 What do you do?"
+msgstr "👋 आप क्या करते हैं?"
+
+msgid "🎯 Choose your occupation"
+msgstr "🎯 अपना व्यवसाय चुनें"
+
+msgid "👨‍💻 Developer"
+msgstr "👨‍💻 डेवलपर"
+
+msgid "🎨 Designer"
+msgstr "🎨 डिज़ाइनर"
+
+msgid "👔 Manager"
+msgstr "👔 प्रबंधक"
+
+msgid "🚀 Founder"
+msgstr "🚀 संस्थापक"
+
+msgid "🎥 Video Editor"
+msgstr "🎥 वीडियो एडिटर"
+
+msgid "📢 Marketer"
+msgstr "📢 मार्केटर"
+
+msgid "📚 Student"
+msgstr "📚 छात्र"
+
+msgid "🔬 Researcher"
+msgstr "🔬 शोधकर्ता"
+
+msgid "✨ Other"
+msgstr "✨ अन्य"
+
+msgid "How would you feel if you could no longer use Level?"
+msgstr "अगर आप Level का उपयोग नहीं कर पाएं तो कैसा महसूस करेंगे?"
+
+msgid "Very disappointed"
+msgstr "बहुत निराश"
+
+msgid "Level has become essential to my workflow"
+msgstr "Level मेरे कार्य प्रवाह के लिए आवश्यक हो गया है"
+
+msgid "Somewhat disappointed"
+msgstr "कुछ हद तक निराश"
+
+msgid "I would miss some features but could manage without"
+msgstr "मुझे कुछ सुविधाओं की कमी महसूस होगी लेकिन बिना इसके भी काम चल जाएगा"
+
+msgid "Not disappointed"
+msgstr "निराश नहीं"
+
+msgid "I could easily find an alternative"
+msgstr "मैं आसानी से कोई विकल्प ढूंढ सकता हूं"
+
+msgid "What was missing or disappointing in your experience with us?"
+msgstr "हमारे साथ आपके अनुभव में क्या कमी थी या निराशाजनक था?"
+
+msgid "Which feature do you use the most in our application?"
+msgstr "आप हमारे एप्लिकेशन में किस सुविधा का सबसे ज्यादा उपयोग करते हैं?"
+
+msgid "How satisfied were you with your experience?"
+msgstr "आप अपने अनुभव से कितने संतुष्ट थे?"
+
+msgid "What would you like to rate us?"
+msgstr "आप हमें कितने अंक देना चाहेंगे?"
+
+msgid "Previous"
+msgstr "पिछला"
+
+msgid "Next"
+msgstr "अगला"
+
+msgid "Submit"
+msgstr "जमा करें"
+
+msgid "Please select your occupation"
+msgstr "कृपया अपना व्यवसाय चुनें"
+
+msgid "Please select an option"
+msgstr "कृपया एक विकल्प चुनें"
+
+msgid "Please enter your response"
+msgstr "कृपया अपना जवाब दर्ज करें"
+
+msgid "Our Current Plans"
+msgstr "हमारी वर्तमान योजनाएं"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+msgstr "किस कीमत पर आपको लगता है कि हमारी पे ऐज़ यू गो योजना (10 जनरेशन) बहुत महंगी है?"
+
+msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgstr "किस कीमत पर आपको लगता है कि हमारी पे ऐज़ यू गो योजना (10 जनरेशन) इतनी सस्ती है कि गुणवत्ता संदिग्ध है?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgstr "किस कीमत पर आपको हमारी मासिक अनलिमिटेड योजना इतनी महंगी लगेगी कि आप खरीदने पर विचार नहीं करेंगे?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgstr "किस कीमत पर आपको हमारी मासिक अनलिमिटेड योजना इतनी कम लगेगी कि आप इसकी गुणवत्ता पर सवाल उठाएंगे?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
+msgstr "किस कीमत पर आपको हमारी वार्षिक अनलिमिटेड योजना बहुत महंगी लगेगी?"
+
+msgid "Which pricing plan would you be most likely to choose?"
+msgstr "आप किस मूल्य योजना को चुनने की सबसे अधिक संभावना रखते हैं?"
+
+msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgstr "किस कीमत पर आपको हमारी मासिक अनलिमिटेड योजना बहुत महंगी लगेगी, लेकिन आप इसे अभी भी देखेंगे?"
+
+msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgstr "किस कीमत पर आपको हमारी वार्षिक अनलिमिटेड योजना एक बेहतरीन विकल्प लगेगी?"

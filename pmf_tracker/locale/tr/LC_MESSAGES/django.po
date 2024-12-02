@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+# Turkish (tr)
+msgid "👋 What do you do?"
+msgstr "👋 Ne iş yapıyorsunuz?"
+
+msgid "🎯 Choose your occupation"
+msgstr "🎯 Mesleğinizi seçin"
+
+msgid "👨‍💻 Developer"
+msgstr "👨‍💻 Geliştirici"
+
+msgid "🎨 Designer"
+msgstr "🎨 Tasarımcı"
+
+msgid "👔 Manager"
+msgstr "👔 Yönetici"
+
+msgid "🚀 Founder"
+msgstr "🚀 Kurucu"
+
+msgid "🎥 Video Editor"
+msgstr "🎥 Video Editörü"
+
+msgid "📢 Marketer"
+msgstr "📢 Pazarlamacı"
+
+msgid "📚 Student"
+msgstr "📚 Öğrenci"
+
+msgid "🔬 Researcher"
+msgstr "🔬 Araştırmacı"
+
+msgid "✨ Other"
+msgstr "✨ Diğer"
+
+msgid "How would you feel if you could no longer use Level?"
+msgstr "Level'ı artık kullanamayacak olsanız nasıl hissederdiniz?"
+
+msgid "Very disappointed"
+msgstr "Çok hayal kırıklığına uğrardım"
+
+msgid "Level has become essential to my workflow"
+msgstr "Level iş akışımın vazgeçilmez bir parçası oldu"
+
+msgid "Somewhat disappointed"
+msgstr "Biraz hayal kırıklığına uğrardım"
+
+msgid "I would miss some features but could manage without"
+msgstr "Bazı özellikleri özlerdim ama idare edebilirdim"
+
+msgid "Not disappointed"
+msgstr "Hayal kırıklığına uğramazdım"
+
+msgid "I could easily find an alternative"
+msgstr "Kolayca bir alternatif bulabilirim"
+
+msgid "What was missing or disappointing in your experience with us?"
+msgstr "Deneyiminizde eksik olan veya sizi hayal kırıklığına uğratan neydi?"
+
+msgid "Which feature do you use the most in our application?"
+msgstr "Uygulamamızda en çok hangi özelliği kullanıyorsunuz?"
+
+msgid "How satisfied were you with your experience?"
+msgstr "Deneyiminizden ne kadar memnun kaldınız?"
+
+msgid "What would you like to rate us?"
+msgstr "Bizi nasıl değerlendirirsiniz?"
+
+msgid "Previous"
+msgstr "Önceki"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Submit"
+msgstr "Gönder"
+
+msgid "Please select your occupation"
+msgstr "Lütfen mesleğinizi seçin"
+
+msgid "Please select an option"
+msgstr "Lütfen bir seçenek belirleyin"
+
+msgid "Please enter your response"
+msgstr "Lütfen yanıtınızı girin" 
+
+msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgstr "Aylık İlkel Planınızın ne kadar kısa süre sonra kırılır?"       
+
+msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgstr "Yıllık İlkel Planınızın ne kadar kısa süre sonra kırılır?"
