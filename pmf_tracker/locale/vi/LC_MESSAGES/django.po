@@ -11,122 +11,129 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# Vietnamese (vi)
-msgid "👋 What do you do?"
+# Occupation related
+msgid "occupation.question"
 msgstr "👋 Bạn làm nghề gì?"
 
-msgid "🎯 Choose your occupation"
+msgid "occupation.select"
 msgstr "🎯 Chọn nghề nghiệp của bạn"
 
-msgid "👨‍💻 Developer"
+# Roles
+msgid "role.dev"
 msgstr "👨‍💻 Lập trình viên"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 Nhà thiết kế"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 Quản lý"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 Người sáng lập"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 Biên tập viên Video"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 Nhà tiếp thị"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 Sinh viên"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 Nhà nghiên cứu"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ Khác"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "Bạn sẽ cảm thấy thế nào nếu không thể sử dụng Level nữa?"
-
-msgid "Very disappointed"
-msgstr "Rất thất vọng"
-
-msgid "Level has become essential to my workflow"
-msgstr "Level đã trở thành thiết yếu trong quy trình làm việc của tôi"
-
-msgid "Somewhat disappointed"
-msgstr "Hơi thất vọng"
-
-msgid "I would miss some features but could manage without"
-msgstr "Tôi sẽ nhớ một số tính năng nhưng có thể xoay xở mà không cần"
-
-msgid "Not disappointed"
-msgstr "Không thất vọng"
-
-msgid "I could easily find an alternative"
-msgstr "Tôi có thể dễ dàng tìm một giải pháp thay thế"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "Điều gì còn thiếu hoặc gây thất vọng trong trải nghiệm của bạn với chúng tôi?"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "Tính năng nào bạn sử dụng nhiều nhất trong ứng dụng của chúng tôi?"
-
-msgid "How satisfied were you with your experience?"
-msgstr "Bạn hài lòng với trải nghiệm của mình đến mức nào?"
-
-msgid "What would you like to rate us?"
-msgstr "Bạn muốn đánh giá chúng tôi bao nhiêu sao?"
-
-msgid "Previous"
-msgstr "Trước"
-
-msgid "Next"
-msgstr "Tiếp"
-
-msgid "Submit"
-msgstr "Gửi"
-
-msgid "Please select your occupation"
-msgstr "Vui lòng chọn nghề nghiệp của bạn"
-
-msgid "Please select an option"
-msgstr "Vui lòng chọn một tùy chọn"
-
-msgid "Please enter your response"
-msgstr "Vui lòng nhập câu trả lời của bạn"
-
-msgid "Our Current Plans"
-msgstr "Các Gói Hiện Tại Của Chúng Tôi"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+# Pricing related
+msgid "price.payg.too_high"
 msgstr "Ở mức giá nào bạn cho rằng gói Trả Theo Lượt (10 lần tạo) của chúng tôi là quá đắt?"
 
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgid "price.payg.too_low"
 msgstr "Ở mức giá nào bạn cho rằng gói Trả Theo Lượt (10 lần tạo) quá rẻ đến mức đáng ngờ về chất lượng?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.monthly.max"
 msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Tháng quá đắt đến mức không cân nhắc mua?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Tháng quá rẻ đến mức đáng ngờ về chất lượng?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
+msgid "price.monthly.high"
+msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Tháng bắt đầu trở nên đắt đỏ, nhưng bạn vẫn cân nhắc mua?"
+
+msgid "price.annual.max"
 msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Năm là quá đắt?"
 
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "Bạn có khả năng chọn gói giá nào nhất?" 
-
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.deal"
 msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Năm là một thương vị tuyệt vời?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
-msgstr "Ở mức giá nào bạn cho rằng gói Không Giới Hạn Hàng Tháng bắt đầu trở nên đắt đỏ, nhưng bạn vẫn cân nhắc mua?"
+msgid "price.plan.preferred"
+msgstr "Bạn có khả năng chọn gói giá nào nhất?"
+
+# Feedback related
+msgid "feedback.disappointment"
+msgstr "Bạn sẽ cảm thấy thế nào nếu không thể sử dụng Level nữa?"
+
+msgid "feedback.very_disappointed"
+msgstr "Rất thất vọng"
+
+msgid "feedback.essential"
+msgstr "Level đã trở thành thiết yếu trong quy trình làm việc của tôi"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "Hơi thất vọng"
+
+msgid "feedback.miss_features"
+msgstr "Tôi sẽ nhớ một số tính năng nhưng có thể xoay xở mà không cần"
+
+msgid "feedback.not_disappointed"
+msgstr "Không thất vọng"
+
+msgid "feedback.find_alternative"
+msgstr "Tôi có thể dễ dàng tìm một giải pháp thay thế"
+
+msgid "feedback.missing"
+msgstr "Điều gì còn thiếu hoặc gây thất vọng trong trải nghiệm của bạn với chúng tôi?"
+
+# Features and satisfaction
+msgid "feature.most_used"
+msgstr "Tính năng nào bạn sử dụng nhiều nhất trong ứng dụng của chúng tôi?"
+
+msgid "satisfaction.level"
+msgstr "Bạn hài lòng với trải nghiệm của mình đến mức nào?"
+
+msgid "rating.request"
+msgstr "Bạn muốn đánh giá chúng tôi bao nhiêu sao?"
+
+# Navigation
+msgid "navigation.previous"
+msgstr "Trước"
+
+msgid "navigation.next"
+msgstr "Tiếp"
+
+msgid "navigation.submit"
+msgstr "Gửi"
+
+# Validation messages
+msgid "validation.select_occupation"
+msgstr "Vui lòng chọn nghề nghiệp của bạn"
+
+msgid "validation.select_option"
+msgstr "Vui lòng chọn một tùy chọn"
+
+msgid "validation.enter_response"
+msgstr "Vui lòng nhập câu trả lời của bạn"
+
+# Plans
+msgid "plans.current"
+msgstr "Các Gói Hiện Tại Của Chúng Tôi"
 
     

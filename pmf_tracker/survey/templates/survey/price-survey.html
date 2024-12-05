@@ -40,7 +40,7 @@
                 <div class="question-container">
                     <!-- Update data-question numbers for all subsequent sections -->
                     <section class="question" data-question="1">
-                        <h2>{% trans "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?" %}</h2>
+                        <h2>{% trans "price.payg.too_high" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('payg_too_expensive_2_99')">
                                 <input type="radio" name="payg_too_expensive" value="2.99" id="payg_too_expensive_2_99" required>
@@ -67,7 +67,7 @@
                     </section>
 
                     <section class="question" data-question="2">
-                        <h2>{% trans "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?" %}</h2>
+                        <h2>{% trans "price.payg.too_low" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('payg_too_cheap_0_99')">
                                 <input type="radio" name="payg_too_cheap" value="0.99" id="payg_too_cheap_0_99" required>
@@ -94,7 +94,7 @@
                     </section>
 
                     <section class="question" data-question="3">
-                        <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?" %}</h2>
+                        <h2>{% trans "price.monthly.max" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('too_expensive_49')">
                                 <input type="radio" name="too_expensive" value="49.99" id="too_expensive_49" required>
@@ -112,7 +112,7 @@
                     </section>
 
                     <section class="question" data-question="4">
-                        <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?" %}</h2>
+                        <h2>{% trans "price.monthly.min" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('too_cheap_9')">
                                 <input type="radio" name="too_cheap" value="9.99" id="too_cheap_9" required>
@@ -130,7 +130,7 @@
                     </section>
 
                     <section class="question" data-question="5">
-                        <h2>{% trans "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?" %}</h2>
+                        <h2>{% trans "price.monthly.high" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('expensive_29')">
                                 <input type="radio" name="expensive" value="29.99" id="expensive_29" required>
@@ -148,7 +148,7 @@
                     </section>
 
                     <section class="question" data-question="6">
-                        <h2>{% trans "At what price would you consider our Annual Unlimited plan to be too expensive?" %}</h2>
+                        <h2>{% trans "price.annual.max" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('annual_too_expensive_299')">
                                 <input type="radio" name="annual_too_expensive" value="299" id="annual_too_expensive_299" required>
@@ -175,7 +175,7 @@
                     </section>
 
                     <section class="question" data-question="7">
-                        <h2>{% trans "At what price would you consider our Annual Unlimited plan to be a great deal?" %}</h2>
+                        <h2>{% trans "price.annual.deal" %}</h2>
                         <div class="price-options">
                             <div class="option-card" onclick="selectOption('annual_bargain_179')">
                                 <input type="radio" name="annual_bargain" value="179" id="annual_bargain_179" required>
@@ -205,7 +205,7 @@
                     </section>
 
                     <section class="question" data-question="8">
-                        <h2>{% trans "Which pricing plan would you be most likely to choose?" %}</h2>
+                        <h2>{% trans "price.plan.preferred" %}</h2>
                         <div class="plan-selection">
                             <div class="option-card" onclick="selectOption('plan_pay_go')">
                                 <input type="radio" name="preferred_plan" value="pay_go" id="plan_pay_go" required>
@@ -233,9 +233,9 @@
                 </div>
 
                 <div class="navigation-buttons">
-                    <button type="button" id="prevBtn" class="btn btn-secondary">{% trans "Previous" %}</button>
-                    <button type="button" id="nextBtn" class="btn btn-primary">{% trans "Next" %}</button>
-                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">{% trans "Submit" %}</button>
+                    <button type="button" id="prevBtn" class="btn btn-secondary">{% trans "navigation.previous" %}</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">{% trans "navigation.next" %}</button>
+                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">{% trans "navigation.submit" %}</button>
                 </div>
             </div>
         </form>

@@ -37,69 +37,69 @@
             <div class="content-wrapper">
                 <div class="question-container">
                     <section class="question" data-question="1">
-                        <h2>{% trans "👋 What do you do?" %}</h2>
+                        <h2>{% trans "occupation.question" %}</h2>
                         <div class="select-wrapper">
                             <select name="occupation" id="occupation" class="form-select custom-select" required>
-                                <option value="" disabled selected>{% trans "🎯 Choose your occupation" %}</option>
-                                <option value="developer">{% trans "👨‍💻 Developer" %}</option>
-                                <option value="designer">{% trans "🎨 Designer" %}</option>
-                                <option value="manager">{% trans "👔 Manager" %}</option>
-                                <option value="founder">{% trans "🚀 Founder" %}</option>
-                                <option value="video_editor">{% trans "🎥 Video Editor" %}</option>
-                                <option value="marketer">{% trans "📢 Marketer" %}</option>
-                                <option value="student">{% trans "📚 Student" %}</option>
-                                <option value="researcher">{% trans "🔬 Researcher" %}</option>
-                                <option value="other">{% trans "✨ Other" %}</option>
+                                <option value="" disabled selected>{% trans "occupation.select" %}</option>
+                                <option value="developer">{% trans "role.dev" %}</option>
+                                <option value="designer">{% trans "role.designer" %}</option>
+                                <option value="manager">{% trans "role.manager" %}</option>
+                                <option value="founder">{% trans "role.founder" %}</option>
+                                <option value="video_editor">{% trans "role.video" %}</option>
+                                <option value="marketer">{% trans "role.marketing" %}</option>
+                                <option value="student">{% trans "role.student" %}</option>
+                                <option value="researcher">{% trans "role.researcher" %}</option>
+                                <option value="other">{% trans "role.other" %}</option>
                             </select>
                             <div class="select-arrow"></div>
-                            <div class="invalid-feedback">{% trans "Please select your occupation" %}</div>
+                            <div class="invalid-feedback">{% trans "validation.select_occupation" %}</div>
                         </div>
                     </section>
 
                     <section class="question" data-question="2">
                         <h2 class="pmf-question">
-                            {% trans "How would you feel if you could no longer use Level?" %}
+                            {% trans "feedback.disappointment" %}
                         </h2>
                         <div class="disappointment-options">
                             <div class="option-card" onclick="selectOption('disappointment_very_disappointed')">
                                 <input type="radio" name="disappointment_level" value="very_disappointed" id="disappointment_very_disappointed" required>
                                 <label for="disappointment_very_disappointed">
                                     <span class="emoji">😢</span>
-                                    <span class="option-title">{% trans "Very disappointed" %}</span>
-                                    <span class="option-description">{% trans "Level has become essential to my workflow" %}</span>
+                                    <span class="option-title">{% trans "feedback.very_disappointed" %}</span>
+                                    <span class="option-description">{% trans "feedback.essential" %}</span>
                                 </label>
                             </div>
                             <div class="option-card" onclick="selectOption('disappointment_somewhat_disappointed')">
                                 <input type="radio" name="disappointment_level" value="somewhat_disappointed" id="disappointment_somewhat_disappointed" required>
                                 <label for="disappointment_somewhat_disappointed">
                                     <span class="emoji">😕</span>
-                                    <span class="option-title">{% trans "Somewhat disappointed" %}</span>
-                                    <span class="option-description">{% trans "I would miss some features but could manage without" %}</span>
+                                    <span class="option-title">{% trans "feedback.somewhat_disappointed" %}</span>
+                                    <span class="option-description">{% trans "feedback.miss_features" %}</span>
                                 </label>
                             </div>
                             <div class="option-card" onclick="selectOption('disappointment_not_disappointed')">
                                 <input type="radio" name="disappointment_level" value="not_disappointed" id="disappointment_not_disappointed" required>
                                 <label for="disappointment_not_disappointed">
                                     <span class="emoji">😐</span>
-                                    <span class="option-title">{% trans "Not disappointed" %}</span>
-                                    <span class="option-description">{% trans "I could easily find an alternative" %}</span>
+                                    <span class="option-title">{% trans "feedback.not_disappointed" %}</span>
+                                    <span class="option-description">{% trans "feedback.find_alternative" %}</span>
                                 </label>
                             </div>
                         </div>
                     </section>
 
                     <section class="question" data-question="3">
-                        <h2>{% trans "What was missing or disappointing in your experience with us?" %}</h2>
+                        <h2>{% trans "feedback.missing" %}</h2>
                         <textarea name="missing_features" class="form-control" rows="4" required></textarea>
                     </section>
 
                     <section class="question" data-question="4">
-                        <h2>{% trans "Which feature do you use the most in our application?" %}</h2>
+                        <h2>{% trans "feature.most_used" %}</h2>
                         <textarea name="most_used_feature" class="form-control" rows="4" required></textarea>
                     </section>
 
                     <section class="question" data-question="5">
-                        <h2>{% trans "How satisfied were you with your experience?" %}</h2>
+                        <h2>{% trans "satisfaction.level" %}</h2>
                         <div class="rating-grid">
                             {% for i in "12345"|make_list %}
                             <div class="rating-card" onclick="selectOption('satisfaction_{{ i }}')">
@@ -116,7 +116,7 @@
                     </section>
 
                     <section class="question" data-question="6">
-                        <h2>{% trans "What would you like to rate us?" %}</h2>
+                        <h2>{% trans "rating.request" %}</h2>
                         <div class="rating-grid">
                             {% for i in "12345"|make_list %}
                             <div class="rating-card" onclick="selectOption('rating_{{ i }}')">
@@ -134,9 +134,9 @@
                 </div>
 
                 <div class="navigation-buttons">
-                    <button type="button" id="prevBtn" class="btn btn-secondary">{% trans "Previous" %}</button>
-                    <button type="button" id="nextBtn" class="btn btn-primary">{% trans "Next" %}</button>
-                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">{% trans "Submit" %}</button>
+                    <button type="button" id="prevBtn" class="btn btn-secondary">{% trans "navigation.previous" %}</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">{% trans "navigation.next" %}</button>
+                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">{% trans "navigation.submit" %}</button>
                 </div>
             </div>
         </form>

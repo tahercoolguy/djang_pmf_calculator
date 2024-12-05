@@ -1,8 +1,3 @@
- # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,120 +6,127 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
- 
- # Arabic (ar)
-msgid "👋 What do you do?"
-msgstr "👋 ما هو عملك؟"
 
-msgid "🎯 Choose your occupation"
+# Occupation related
+msgid "occupation.question"
+msgstr "ما هو عملك؟"
+
+msgid "occupation.select"
 msgstr "🎯 اختر مهنتك"
 
-msgid "👨‍💻 Developer"
+# Roles
+msgid "role.dev"
 msgstr "👨‍💻 مطور"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 مصمم"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 مدير"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 مؤسس"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 محرر فيديو"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 مسوق"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 طالب"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 باحث"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ أخرى"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "كيف ستشعر إذا لم تعد قادراً على استخدام Level؟"
-
-msgid "Very disappointed"
-msgstr "محبط جداً"
-
-msgid "Level has become essential to my workflow"
-msgstr "أصبح Level ضرورياً في سير عملي"
-
-msgid "Somewhat disappointed"
-msgstr "محبط نوعاً ما"
-
-msgid "I would miss some features but could manage without"
-msgstr "سأفتقد بعض الميزات لكن يمكنني التدبر بدونها"
-
-msgid "Not disappointed"
-msgstr "لست محبطاً"
-
-msgid "I could easily find an alternative"
-msgstr "يمكنني إيجاد بديل بسهولة"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "ما الذي كان مفقوداً أو مخيباً للآمال في تجربتك معنا؟"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "ما هي الميزة التي تستخدمها أكثر في تطبيقنا؟"
-
-msgid "How satisfied were you with your experience?"
-msgstr "ما مدى رضاك عن تجربتك؟"
-
-msgid "What would you like to rate us?"
-msgstr "كيف تقيمنا؟"
-
-msgid "Previous"
-msgstr "السابق"
-
-msgid "Next"
-msgstr "التالي"
-
-msgid "Submit"
-msgstr "إرسال"
-
-msgid "Please select your occupation"
-msgstr "الرجاء اختيار مهنتك"
-
-msgid "Please select an option"
-msgstr "الرجاء اختيار خيار"
-
-msgid "Please enter your response"
-msgstr "الرجاء إدخال إجابتك"
-
-msgid "Our Current Plans"
-msgstr "خططنا الحالية"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+# Pricing related
+msgid "price.payg.too_high"
 msgstr "عند أي سعر تعتبر خطة الدفع حسب الاستخدام (10 إنشاءات) باهظة الثمن؟"
 
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgid "price.payg.too_low"
 msgstr "عند أي سعر تعتبر خطة الدفع حسب الاستخدام (10 إنشاءات) رخيصة لدرجة تشكك في جودتها؟"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.monthly.max"
 msgstr "عند أي سعر تعتبر خطتنا الشهرية غير المحدودة باهظة الثمن لدرجة أنك لن تفكر في شرائها؟"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "عند أي سعر تعتبر خطتنا الشهرية غير المحدودة منخفضة لدرجة تشكك في جودتها؟"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
-msgstr "عند أي سعر تعتبر خطتنا السنوية غير المحدودة باهظة الثمن؟"
-
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "أي خطة تسعير من المرجح أن تختار؟"
-
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgid "price.monthly.high"
 msgstr "عند أي سعر تعتبر خطتنا الشهرية غير المحدودة باهظة الثمن، ولكن لا تزال تعتبرها معقولة؟"
 
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.max"
+msgstr "عند أي سعر تعتبر خطتنا السنوية غير المحدودة باهظة الثمن؟"
+
+msgid "price.annual.deal"
 msgstr "عند أي سعر تعتبر خطتنا السنوية غير المحدودة عرضًا جيدًا جدًا؟"
+
+msgid "price.plan.preferred"
+msgstr "أي خطة تسعير من المرجح أن تختار؟"
+
+# Feedback related
+msgid "feedback.disappointment"
+msgstr "كيف ستشعر إذا لم تعد قادراً على استخدام Level؟"
+
+msgid "feedback.very_disappointed"
+msgstr "محبط جداً"
+
+msgid "feedback.essential"
+msgstr "أصبح Level ضرورياً في سير عملي"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "محبط نوعاً ما"
+
+msgid "feedback.miss_features"
+msgstr "سأفتقد بعض الميزات لكن يمكنني التدبر بدونها"
+
+msgid "feedback.not_disappointed"
+msgstr "لست محبطاً"
+
+msgid "feedback.find_alternative"
+msgstr "يمكنني إيجاد بديل بسهولة"
+
+msgid "feedback.missing"
+msgstr "ما الذي كان مفقوداً أو مخيباً للآمال في تجربتك معنا؟"
+
+# Features and satisfaction
+msgid "feature.most_used"
+msgstr "ما هي الميزة التي تستخدمها أكثر في تطبيقنا؟"
+
+msgid "satisfaction.level"
+msgstr "ما مدى رضاك عن تجربتك؟"
+
+msgid "rating.request"
+msgstr "كيف تقيمنا؟"
+
+# Navigation
+msgid "navigation.previous"
+msgstr "السابق"
+
+msgid "navigation.next"
+msgstr "التالي"
+
+msgid "navigation.submit"
+msgstr "إرسال"
+
+# Validation messages
+msgid "validation.select_occupation"
+msgstr "الرجاء اختيار مهنتك"
+
+msgid "validation.select_option"
+msgstr "الرجاء اختيار خيار"
+
+msgid "validation.enter_response"
+msgstr "الرجاء إدخال إجابتك"
+
+# Plans
+msgid "plans.current"
+msgstr "خططنا الحالية"

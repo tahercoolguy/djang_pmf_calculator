@@ -11,120 +11,127 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
- 
-# Indonesian (id)
-msgid "👋 What do you do?"
+
+# Occupation related
+msgid "occupation.question"
 msgstr "👋 Apa pekerjaan Anda?"
 
-msgid "🎯 Choose your occupation"
+msgid "occupation.select"
 msgstr "🎯 Pilih pekerjaan Anda"
 
-msgid "👨‍💻 Developer"
+# Roles
+msgid "role.dev"
 msgstr "👨‍💻 Pengembang"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 Desainer"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 Manajer"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 Pendiri"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 Editor Video"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 Pemasar"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 Pelajar"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 Peneliti"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ Lainnya"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "Bagaimana perasaan Anda jika tidak bisa lagi menggunakan Level?"
-
-msgid "Very disappointed"
-msgstr "Sangat kecewa"
-
-msgid "Level has become essential to my workflow"
-msgstr "Level telah menjadi penting dalam alur kerja saya"
-
-msgid "Somewhat disappointed"
-msgstr "Agak kecewa"
-
-msgid "I would miss some features but could manage without"
-msgstr "Saya akan merindukan beberapa fitur tapi bisa mengatasi tanpanya"
-
-msgid "Not disappointed"
-msgstr "Tidak kecewa"
-
-msgid "I could easily find an alternative"
-msgstr "Saya bisa dengan mudah menemukan alternatif"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "Apa yang kurang atau mengecewakan dalam pengalaman Anda dengan kami?"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "Fitur mana yang paling sering Anda gunakan dalam aplikasi kami?"
-
-msgid "How satisfied were you with your experience?"
-msgstr "Seberapa puas Anda dengan pengalaman Anda?"
-
-msgid "What would you like to rate us?"
-msgstr "Berapa nilai yang ingin Anda berikan?"
-
-msgid "Previous"
-msgstr "Sebelumnya"
-
-msgid "Next"
-msgstr "Selanjutnya"
-
-msgid "Submit"
-msgstr "Kirim"
-
-msgid "Please select your occupation"
-msgstr "Silakan pilih pekerjaan Anda"
-
-msgid "Please select an option"
-msgstr "Silakan pilih opsi"
-
-msgid "Please enter your response"
-msgstr "Silakan masukkan respons Anda"
-
-msgid "Our Current Plans"
-msgstr "Paket Layanan Kami Saat Ini"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+# Pricing related
+msgid "price.payg.too_high"
 msgstr "Pada harga berapa Anda menganggap paket Pay As You Go kami (10 generasi) terlalu mahal?"
 
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgid "price.payg.too_low"
 msgstr "Pada harga berapa Anda menganggap paket Pay As You Go kami (10 generasi) terlalu murah sehingga meragukan kualitasnya?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.monthly.max"
 msgstr "Pada harga berapa Anda menganggap paket Bulanan Tak Terbatas kami terlalu mahal sehingga Anda tidak akan mempertimbangkan untuk membelinya?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "Pada harga berapa Anda menganggap paket Bulanan Tak Terbatas kami terlalu rendah sehingga Anda meragukan kualitasnya?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
-msgstr "Pada harga berapa Anda menganggap paket Tahunan Tak Terbatas kami terlalu mahal?"
-
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "Paket harga mana yang paling mungkin Anda pilih?"
-
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgid "price.monthly.high"
 msgstr "Pada harga berapa Anda menganggap paket Bulanan Tak Terbatas kami mulai terlalu mahal, tetapi Anda tetap akan mempertimbangkannya?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.max"
+msgstr "Pada harga berapa Anda menganggap paket Tahunan Tak Terbatas kami terlalu mahal?"
+
+msgid "price.annual.deal"
 msgstr "Pada harga berapa Anda menganggap paket Tahunan Tak Terbatas kami sebagai penawaran yang fantastis?"
+
+msgid "price.plan.preferred"
+msgstr "Paket harga mana yang paling mungkin Anda pilih?"
+
+# Feedback related
+msgid "feedback.disappointment"
+msgstr "Bagaimana perasaan Anda jika tidak bisa lagi menggunakan Level?"
+
+msgid "feedback.very_disappointed"
+msgstr "Sangat kecewa"
+
+msgid "feedback.essential"
+msgstr "Level telah menjadi penting dalam alur kerja saya"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "Agak kecewa"
+
+msgid "feedback.miss_features"
+msgstr "Saya akan merindukan beberapa fitur tapi bisa mengatasi tanpanya"
+
+msgid "feedback.not_disappointed"
+msgstr "Tidak kecewa"
+
+msgid "feedback.find_alternative"
+msgstr "Saya bisa dengan mudah menemukan alternatif"
+
+msgid "feedback.missing"
+msgstr "Apa yang kurang atau mengecewakan dalam pengalaman Anda dengan kami?"
+
+# Features and satisfaction
+msgid "feature.most_used"
+msgstr "Fitur mana yang paling sering Anda gunakan dalam aplikasi kami?"
+
+msgid "satisfaction.level"
+msgstr "Seberapa puas Anda dengan pengalaman Anda?"
+
+msgid "rating.request"
+msgstr "Berapa nilai yang ingin Anda berikan?"
+
+# Navigation
+msgid "navigation.previous"
+msgstr "Sebelumnya"
+
+msgid "navigation.next"
+msgstr "Selanjutnya"
+
+msgid "navigation.submit"
+msgstr "Kirim"
+
+# Validation messages
+msgid "validation.select_occupation"
+msgstr "Silakan pilih pekerjaan Anda"
+
+msgid "validation.select_option"
+msgstr "Silakan pilih opsi"
+
+msgid "validation.enter_response"
+msgstr "Silakan masukkan respons Anda"
+
+# Plans
+msgid "plans.current"
+msgstr "Paket Layanan Kami Saat Ini"

@@ -11,120 +11,119 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-
-msgid "👋 What do you do?"
+msgid "occupation.question"
 msgstr "👋 ¿A qué te dedicas?"
 
-msgid "🎯 Choose your occupation"
+msgid "occupation.select"
 msgstr "🎯 Elige tu ocupación"
 
-msgid "👨‍💻 Developer"
+msgid "role.dev"
 msgstr "👨‍💻 Desarrollador"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 Diseñador"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 Gerente"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 Fundador"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 Editor de Video"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 Mercadólogo"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 Estudiante"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 Investigador"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ Otro"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "¿Cómo te sentirías si ya no pudieras usar Level?"
-
-msgid "Very disappointed"
-msgstr "Muy decepcionado"
-
-msgid "Level has become essential to my workflow"
-msgstr "Level se ha vuelto esencial en mi flujo de trabajo"
-
-msgid "Somewhat disappointed"
-msgstr "Algo decepcionado"
-
-msgid "I would miss some features but could manage without"
-msgstr "Extrañaría algunas funciones pero podría arreglármelas sin él"
-
-msgid "Not disappointed"
-msgstr "No decepcionado"
-
-msgid "I could easily find an alternative"
-msgstr "Podría encontrar fácilmente una alternativa"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "¿Qué faltó o qué te decepcionó en tu experiencia con nosotros?"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "¿Qué función usas más en nuestra aplicación?"
-
-msgid "How satisfied were you with your experience?"
-msgstr "¿Qué tan satisfecho estás con tu experiencia?"
-
-msgid "What would you like to rate us?"
-msgstr "¿Qué calificación nos darías?"
-
-msgid "Previous"
-msgstr "Anterior"
-
-msgid "Next"
-msgstr "Siguiente"
-
-msgid "Submit"
-msgstr "Enviar"
-
-msgid "Please select your occupation"
-msgstr "Por favor selecciona tu ocupación"
-
-msgid "Please select an option"
-msgstr "Por favor selecciona una opción"
-
-msgid "Please enter your response"
-msgstr "Por favor ingresa tu respuesta"
-
-msgid "Our Current Plans"
-msgstr "Nuestros Planes Actuales"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+msgid "price.payg.too_high"
 msgstr "¿A qué precio considerarías que nuestro plan Pay As You Go (10 generaciones) es demasiado caro?"
 
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgid "price.payg.too_low"
 msgstr "¿A qué precio considerarías que nuestro plan Pay As You Go (10 generaciones) es demasiado barato para ser confiable?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.monthly.max"
 msgstr "¿A qué precio considerarías que nuestro plan Mensual Ilimitado es tan caro que no considerarías comprarlo?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "¿A qué precio considerarías que nuestro plan Mensual Ilimitado es tan bajo que cuestionarías su calidad?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
-msgstr "¿A qué precio considerarías que nuestro plan Anual Ilimitado es demasiado caro?"
-
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "¿Qué plan de precios serías más propenso a elegir?"
-
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgid "price.monthly.high"
 msgstr "¿A qué precio considerarías que nuestro plan Mensual Ilimitado está empezando a ser caro, pero todavía lo considerarías?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.max"
+msgstr "¿A qué precio considerarías que nuestro plan Anual Ilimitado es demasiado caro?"
+
+msgid "price.annual.deal"
 msgstr "¿A qué precio considerarías que nuestro plan Anual Ilimitado es una gran oferta?"
+
+msgid "price.plan.preferred"
+msgstr "¿Qué plan de precios serías más propenso a elegir?"
+
+msgid "feedback.disappointment"
+msgstr "¿Cómo te sentirías si ya no pudieras usar Level?"
+
+msgid "feedback.very_disappointed"
+msgstr "Muy decepcionado"
+
+msgid "feedback.essential"
+msgstr "Level se ha vuelto esencial en mi flujo de trabajo"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "Algo decepcionado"
+
+msgid "feedback.miss_features"
+msgstr "Extrañaría algunas funciones pero podría arreglármelas sin él"
+
+msgid "feedback.not_disappointed"
+msgstr "No decepcionado"
+
+msgid "feedback.find_alternative"
+msgstr "Podría encontrar fácilmente una alternativa"
+
+msgid "feedback.missing"
+msgstr "¿Qué faltó o qué te decepcionó en tu experiencia con nosotros?"
+
+msgid "feature.most_used"
+msgstr "¿Qué función usas más en nuestra aplicación?"
+
+msgid "satisfaction.level"
+msgstr "¿Qué tan satisfecho estás con tu experiencia?"
+
+msgid "rating.request"
+msgstr "¿Qué calificación nos darías?"
+
+msgid "navigation.previous"
+msgstr "Anterior"
+
+msgid "navigation.next"
+msgstr "Siguiente"
+
+msgid "navigation.submit"
+msgstr "Enviar"
+
+msgid "validation.select_occupation"
+msgstr "Por favor selecciona tu ocupación"
+
+msgid "validation.select_option"
+msgstr "Por favor selecciona una opción"
+
+msgid "validation.enter_response"
+msgstr "Por favor ingresa tu respuesta"
+
+msgid "plans.current"
+msgstr "Nuestros Planes Actuales"

@@ -11,118 +11,127 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-
-# Thai (th)
-msgid "👋 What do you do?"
+# Occupation related
+msgid "occupation.question"
 msgstr "👋 คุณทำงานอะไร?"
 
-msgid "🎯 Choose your occupation"
+msgid "occupation.select"
 msgstr "🎯 เลือกอาชีพของคุณ"
 
-msgid "👨‍💻 Developer"
+# Roles
+msgid "role.dev"
 msgstr "👨‍💻 นักพัฒนา"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 นักออกแบบ"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 ผู้จัดการ"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 ผู้ก่อตั้ง"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 ตัดต่อวิดีโอ"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 นักการตลาด"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 นักเรียน"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 นักวิจัย"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ อื่นๆ"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "คุณจะรู้สึกอย่างไรถ้าไม่สามารถใช้ Level ได้อีกต่อไป?"
-
-msgid "Very disappointed"
-msgstr "ผิดหวังมาก"
-
-msgid "Level has become essential to my workflow"
-msgstr "Level กลายเป็นสิ่งจำเป็นในการทำงานของฉัน"
-
-msgid "Somewhat disappointed"
-msgstr "ค่อนข้างผิดหวัง"
-
-msgid "I would miss some features but could manage without"
-msgstr "ฉันจะคิดถึงบางฟีเจอร์แต่ก็สามารถจัดการได้โดยไม่มีมัน"
-
-msgid "Not disappointed"
-msgstr "ไม่ผิดหวัง"
-
-msgid "I could easily find an alternative"
-msgstr "ฉันสามารถหาทางเลือกอื่นได้ง่าย"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "อะไรที่ขาดหายไปหรือน่าผิดหวังในประสบการณ์การใช้งานของคุณ?"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "คุณใช้ฟีเจอร์ไหนมากที่สุดในแอพพลิเคชันของเรา?"
-
-msgid "How satisfied were you with your experience?"
-msgstr "คุณพึงพอใจกับประสบการณ์การใช้งานมากแค่ไหน?"
-
-msgid "What would you like to rate us?"
-msgstr "คุณอยากให้คะแนนเราเท่าไหร่?"
-
-msgid "Previous"
-msgstr "ก่อนหน้า"
-
-msgid "Next"
-msgstr "ถัดไป"
-
-msgid "Submit"
-msgstr "ส่ง"
-
-msgid "Please select your occupation"
-msgstr "กรุณาเลือกอาชีพของคุณ"
-
-msgid "Please select an option"
-msgstr "กรุณาเลือกตัวเลือก"
-
-msgid "Please enter your response"
-msgstr "กรุณากรอกคำตอบของคุณ"
-
-msgid "Our Current Plans"
-msgstr "แผนปัจจุบันของเรา"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+# Pricing related
+msgid "price.payg.too_high"
 msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนแบบจ่ายตามการใช้งาน (10 ครั้ง) ของเราแพงเกินไป?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.payg.too_low"
+msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนแบบจ่ายตามการใช้งาน (10 ครั้ง) ของเราถูกเกินไปจนน่าสงสัยในคุณภาพ?"
+
+msgid "price.monthly.max"
 msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายเดือนแบบไม่จำกัดของเราแพงเกินไปจนน่าสงสัยในคุณภาพ?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายเดือนแบบไม่จำกัดของเราถูกเกินไปจนน่าสงสัยในคุณภาพ?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
-msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายปีแบบไม่จำกัดของเราแพงเกินไป?"
-
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "คุณมีแนวโน้มที่จะเลือกแผนราคาใด?"
-
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgid "price.monthly.high"
 msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายเดือนแบบไม่จำกัดของเราเริ่มดูแพงเกินไป แต่คุณก็ยังคิดว่ามันคุ้มค่า?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.max"
+msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายปีแบบไม่จำกัดของเราแพงเกินไป?"
+
+msgid "price.annual.deal"
 msgstr "ที่ราคาเท่าไหร่คุณคิดว่าแผนรายปีแบบไม่จำกัดของเราเป็นสิ่งที่คุ้มค่า?"
+
+msgid "price.plan.preferred"
+msgstr "คุณมีแนวโน้มที่จะเลือกแผนราคาใด?"
+
+# Feedback related
+msgid "feedback.disappointment"
+msgstr "คุณจะรู้สึกอย่างไรถ้าไม่สามารถใช้ Level ได้อีกต่อไป?"
+
+msgid "feedback.very_disappointed"
+msgstr "ผิดหวังมาก"
+
+msgid "feedback.essential"
+msgstr "Level กลายเป็นสิ่งจำเป็นในการทำงานของฉัน"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "ค่อนข้างผิดหวัง"
+
+msgid "feedback.miss_features"
+msgstr "ฉันจะคิดถึงบางฟีเจอร์แต่ก็สามารถจัดการได้โดยไม่มีมัน"
+
+msgid "feedback.not_disappointed"
+msgstr "ไม่ผิดหวัง"
+
+msgid "feedback.find_alternative"
+msgstr "ฉันสามารถหาทางเลือกอื่นได้ง่าย"
+
+msgid "feedback.missing"
+msgstr "อะไรที่ขาดหายไปหรือน่าผิดหวังในประสบการณ์การใช้งานของคุณ?"
+
+# Features and satisfaction
+msgid "feature.most_used"
+msgstr "คุณใช้ฟีเจอร์ไหนมากที่สุดในแอพพลิเคชันของเรา?"
+
+msgid "satisfaction.level"
+msgstr "คุณพึงพอใจกับประสบการณ์การใช้งานมากแค่ไหน?"
+
+msgid "rating.request"
+msgstr "คุณอยากให้คะแนนเราเท่าไหร่?"
+
+# Navigation
+msgid "navigation.previous"
+msgstr "ก่อนหน้า"
+
+msgid "navigation.next"
+msgstr "ถัดไป"
+
+msgid "navigation.submit"
+msgstr "ส่ง"
+
+# Validation messages
+msgid "validation.select_occupation"
+msgstr "กรุณาเลือกอาชีพของคุณ"
+
+msgid "validation.select_option"
+msgstr "กรุณาเลือกตัวเลือก"
+
+msgid "validation.enter_response"
+msgstr "กรุณากรอกคำตอบของคุณ"
+
+# Plans
+msgid "plans.current"
+msgstr "แผนปัจจุบันของเรา"

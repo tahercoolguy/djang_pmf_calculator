@@ -11,120 +11,127 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# Korean (ko)
-msgid "👋 What do you do?"
+# Occupation related
+msgid "occupation.question"
 msgstr "👋 무슨 일을 하시나요?"
 
-msgid "🎯 Choose your occupation"
+msgid "occupation.select"
 msgstr "🎯 직업을 선택하세요"
 
-msgid "👨‍💻 Developer"
+# Roles
+msgid "role.dev"
 msgstr "👨‍💻 개발자"
 
-msgid "🎨 Designer"
+msgid "role.designer"
 msgstr "🎨 디자이너"
 
-msgid "👔 Manager"
+msgid "role.manager"
 msgstr "👔 매니저"
 
-msgid "🚀 Founder"
+msgid "role.founder"
 msgstr "🚀 창업자"
 
-msgid "🎥 Video Editor"
+msgid "role.video"
 msgstr "🎥 영상 편집자"
 
-msgid "📢 Marketer"
+msgid "role.marketing"
 msgstr "📢 마케터"
 
-msgid "📚 Student"
+msgid "role.student"
 msgstr "📚 학생"
 
-msgid "🔬 Researcher"
+msgid "role.researcher"
 msgstr "🔬 연구원"
 
-msgid "✨ Other"
+msgid "role.other"
 msgstr "✨ 기타"
 
-msgid "How would you feel if you could no longer use Level?"
-msgstr "Level을 더 이상 사용할 수 없다면 어떤 느낌이 들까요?"
-
-msgid "Very disappointed"
-msgstr "매우 실망"
-
-msgid "Level has become essential to my workflow"
-msgstr "Level은 제 업무 흐름에 필수적입니다"
-
-msgid "Somewhat disappointed"
-msgstr "약간 실망"
-
-msgid "I would miss some features but could manage without"
-msgstr "일부 기능이 그립겠지만 없이도 할 수 있습니다"
-
-msgid "Not disappointed"
-msgstr "실망하지 않음"
-
-msgid "I could easily find an alternative"
-msgstr "쉽게 대안을 찾을 수 있습니다"
-
-msgid "What was missing or disappointing in your experience with us?"
-msgstr "저희 서비스에서 부족했거나 실망스러웠던 점은 무엇인가요?"
-
-msgid "Which feature do you use the most in our application?"
-msgstr "우리 애플리케이션에서 가장 많이 사용하는 기능은 무엇인가요?"
-
-msgid "How satisfied were you with your experience?"
-msgstr "경험에 대해 얼마나 만족하셨나요?"
-
-msgid "What would you like to rate us?"
-msgstr "어떤 평가를 주시겠습니까?"
-
-msgid "Previous"
-msgstr "이전"
-
-msgid "Next"
-msgstr "다음"
-
-msgid "Submit"
-msgstr "제출"
-
-msgid "Please select your occupation"
-msgstr "직업을 선택해 주세요"
-
-msgid "Please select an option"
-msgstr "옵션을 선택해 주세요"
-
-msgid "Please enter your response"
-msgstr "응답을 입력해 주세요"
-
-msgid "Our Current Plans"
-msgstr "현재 요금제"
-
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too expensive?"
+# Pricing related
+msgid "price.payg.too_high"
 msgstr "종량제 요금제(10회 생성)가 어느 가격이면 너무 비싸다고 생각하시나요?"
 
-msgid "At what price would you consider our Pay As You Go plan (10 generations) to be too cheap?"
+msgid "price.payg.too_low"
 msgstr "종량제 요금제(10회 생성)가 어느 가격이면 너무 싸서 품질이 의심되나요?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so expensive that you would not consider buying it?"
+msgid "price.monthly.max"
 msgstr "월간 무제한 요금제가 어느 가격이면 구매를 고려하지 않을 만큼 비싸다고 생각하시나요?"
 
-msgid "At what price would you consider our Monthly Unlimited plan to be so low that you would question its quality?"
+msgid "price.monthly.min"
 msgstr "월간 무제한 요금제가 어느 가격이면 너무 싸서 품질이 의심되나요?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be too expensive?"
-msgstr "연간 무제한 요금제가 어느 가격이면 너무 비싸다고 생각하시나요?"
-
-msgid "Which pricing plan would you be most likely to choose?"
-msgstr "어떤 요금제를 선택하실 가능성이 가장 높으신가요?" 
-
-msgid "At what price would you consider our Monthly Unlimited plan to be starting to get expensive, but you would still consider it?"
+msgid "price.monthly.high"
 msgstr "월간 무제한 요금제가 어느 가격이면 너무 비싸서 시작되기 시작하지만 여전히 구매를 고려하실 가능성이 높으신가요?"
 
-msgid "At what price would you consider our Annual Unlimited plan to be a great deal?"
+msgid "price.annual.max"
+msgstr "연간 무제한 요금제가 어느 가격이면 너무 비싸다고 생각하시나요?"
+
+msgid "price.annual.deal"
 msgstr "연간 무제한 요금제가 어느 가격이면 매우 좋은 제안으로 간주하실 가능성이 높으신가요?"
+
+msgid "price.plan.preferred"
+msgstr "어떤 요금제를 선택하실 가능성이 가장 높으신가요?"
+
+# Feedback related
+msgid "feedback.disappointment"
+msgstr "Level을 더 이상 사용할 수 없다면 어떤 느낌이 들까요?"
+
+msgid "feedback.very_disappointed"
+msgstr "매우 실망"
+
+msgid "feedback.essential"
+msgstr "Level은 제 업무 흐름에 필수적입니다"
+
+msgid "feedback.somewhat_disappointed"
+msgstr "약간 실망"
+
+msgid "feedback.miss_features"
+msgstr "일부 기능이 그립겠지만 없이도 할 수 있습니다"
+
+msgid "feedback.not_disappointed"
+msgstr "실망하지 않음"
+
+msgid "feedback.find_alternative"
+msgstr "쉽게 대안을 찾을 수 있습니다"
+
+msgid "feedback.missing"
+msgstr "저희 서비스에서 부족했거나 실망스러웠던 점은 무엇인가요?"
+
+# Features and satisfaction
+msgid "feature.most_used"
+msgstr "우리 애플리케이션에서 가장 많이 사용하는 기능은 무엇인가요?"
+
+msgid "satisfaction.level"
+msgstr "경험에 대해 얼마나 만족하셨나요?"
+
+msgid "rating.request"
+msgstr "어떤 평가를 주시겠습니까?"
+
+# Navigation
+msgid "navigation.previous"
+msgstr "이전"
+
+msgid "navigation.next"
+msgstr "다음"
+
+msgid "navigation.submit"
+msgstr "제출"
+
+# Validation messages
+msgid "validation.select_occupation"
+msgstr "직업을 선택해 주세요"
+
+msgid "validation.select_option"
+msgstr "옵션을 선택해 주세요"
+
+msgid "validation.enter_response"
+msgstr "응답을 입력해 주세요"
+
+# Plans
+msgid "plans.current"
+msgstr "현재 요금제"
